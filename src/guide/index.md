@@ -230,5 +230,5 @@ new Vue({
 </script>
 {% endraw %}
 
-I hope this gives you a basic idea of how Vue.js works. I'm sure you also have many questions now - read along, and we will cover them in the rest of the guide.
+<!-- I hope this gives you a basic idea of how Vue.js works. I'm sure you also have many questions now - read along, and we will cover them in the rest of the guide. -->
 Kami harap ini dapat memberikan Anda gambaran bagaimana Vue.js bekerja. Kami yakin anda juga memiliki banyak pertanyaan sekarang. Silakan baca terus, dan kami akan membahasnya di panduan berikutnya.
