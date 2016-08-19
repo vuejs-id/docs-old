@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sintaks Data Binding - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82114244-2', 'docs.vuejs.id');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">Guide</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">Examples</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">Forum</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">Chat</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">Guide</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">Examples</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">Forum</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">Chat</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">Support Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            Guide
+            <select class="version-select">
+                <option selected>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">Instalasi</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">Memulai</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">Selayang Pandang</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">The Vue Instance</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link current">Sintaks Data Binding</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">Computed Properties</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">Class and Style Bindings</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">Conditional Rendering</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">List Rendering</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">Methods and Event Handling</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">Transitions</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">Components</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">Custom Filters</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">Mixins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">Building Large-Scale Apps</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/join.html" class="sidebar-link">Join the Vue Community!</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <div id="ad">
+  <!-- <span>Proudly sponsored by</span> -->
+  <span>Disponsori oleh</span>
+  <br>
+  <a href="https://strikingly.com/s/careers?utm_source=v" target="_blank"
+    style="display:inline-block;padding-top:8px">
+    <img src="/images/strikingly.png">
+  </a>
+</div>
+
+    <h1>Sintaks Data Binding</h1>
+    <!-- Vue.js uses a DOM-based templating implementation. This means that all Vue.js templates are essentially valid, parsable HTML enhanced with some special attributes. Keep that in mind, since this makes Vue templates fundamentally different from string-based templates. -->
+<p>Vue.js menggunakan implementasi template berbasis DOM (Document Object Model). Inilah yang menjadikan semua template Vue.js pada dasarnya valid, parsable HTML yang ditingkatkan dengan beberapa atribut spesial. Ingatlah, karena inilah yang membuat template pada Vue pada dasarnya berbeda dengan template berbasis string.</p>
+<!-- ## Interpolations -->
+<h2 id="Interpolasi"><a href="#Interpolasi" class="headerlink" title="Interpolasi"></a>Interpolasi</h2><!-- ### Text -->
+<h3 id="Teks"><a href="#Teks" class="headerlink" title="Teks"></a>Teks</h3><!-- The most basic form of data binding is text interpolation using the "Mustache" syntax (double curly braces): -->
+<p>Bentuk paling dasar dari data binding adalah interpolasi teks dengan menggunakan sintaks “Kumis” (kurung kurawal ganda):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Message: &#123;&#123; msg &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- The mustache tag will be replaced with the value of the `msg` property on the corresponding data object. It will also be updated whenever the data object's `msg` property changes. -->
+<p>Tag kumis tersebut akan digantikan dengan value (nilai) dari property <code>msg</code> pada data object yang berhubungan. Ia juga akan diperbaharui ketika properti data object <code>msg</code> berubah.</p>
+<!-- You can also perform one-time interpolations that do not update on data change: -->
+<p>Anda juga dapat melakukan one-time interpolations (interpolasi satu kali) dimana tidak akan diperbaharui ketika data berubah:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Tulisan ini tidak akan berubah: &#123;&#123;* msg &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Raw-HTML"><a href="#Raw-HTML" class="headerlink" title="Raw HTML"></a>Raw HTML</h3><!-- The double mustaches interprets the data as plain text, not HTML. In order to output real HTML, you will need to use triple mustaches: -->
+<p>Tanda kurung kurawal ganda meng-interpretasi data sebagai teks biasa, dan bukan tag HTML. Jika Anda ingin menghasilkan tag HTML, Anda membutuhkan tripel kurung kurawal.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;&#123; raw_html &#125;&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- The contents are inserted as plain HTML - data bindings are ignored. If you need to reuse template pieces, you should use [partials](/api/#partial). -->
+<p>Konten yang disisipkan sebagai HTML biasa - data binding mengabaikannya. Jika Anda membutuhkan potongan template yang dapat digunakan ulang, Anda dapat menggunakan <a href="/api/#partial">partials</a>.</p>
+<!-- <p class="tip">Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to [XSS attacks](https://en.wikipedia.org/wiki/Cross-site_scripting). Only use HTML interpolation on trusted content and **never** on user-provided content.</p> -->
+<p class="tip">Me-render HTML semaunya secara dinamis pada website dapat membahayakan, karena ia dapat dengan mudah menyebabkan <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">serangan XSS</a>. Hanya gunakan interpolasi HTML pada konten yang terpercaya, dan <strong>jangan pernah</strong> menggunakannya pada user-provided content (konten yang berasal dari pengguna).</p>
+
+<!-- ### Attributes -->
+<h3 id="Atribut"><a href="#Atribut" class="headerlink" title="Atribut"></a>Atribut</h3><!-- Mustaches can also be used inside HTML attributes: -->
+<p>Kurung kurawal juga dapat digunakan di dalam atribut HTML:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"item-&#123;&#123; id &#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- Note that attribute interpolations are disallowed in Vue.js directives and special attributes. Don't worry, Vue.js will raise warnings for you when mustaches are used in wrong places. -->
+<p>Perlu dicatat jika interpolasi atribut tidak diperkenankan untuk digunakan pada directive Vue.js dan atribut khusus. Jangan panik, Vue.js akan memunculkan peringatan untuk Anda jika kurung kurawal dipakai pada tempat yang salah.</p>
+<h2 id="Binding-Expressions"><a href="#Binding-Expressions" class="headerlink" title="Binding Expressions"></a>Binding Expressions</h2><!-- The text we put inside mustache tags are called **binding expressions**. In Vue.js, a binding expression consists of a single JavaScript expression optionally followed by one or more filters. -->
+<p>Teks yang kita masukkan kedalam kurung kurawal disebut dengan <strong>binding expressions</strong>. Pada Vue.js, sebuah binding expression terdiri dari expression JavaScript tunggal yang secara opsional diikuti oleh satu atau lebih filter.</p>
+<h3 id="JavaScript-Expressions"><a href="#JavaScript-Expressions" class="headerlink" title="JavaScript Expressions"></a>JavaScript Expressions</h3><!-- So far we've only been binding to simple property keys in our templates. But Vue.js actually supports the full power of JavaScript expressions inside data bindings: -->
+<p>Sejauh ini kita hanya mem-binding property key yang sederhana pada template kita. Namun Vue.js sebenarnya mendukung kekuatan penuh dari JavaScript expression di dalam data binding:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; number + 1 &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; message.split('').reverse().join('') &#125;&#125;</div></pre></td></tr></table></figure>
+<!-- These expressions will be evaluated in the data scope of the owner Vue instance. One restriction is that each binding can only contain **one single expression**, so the following will **NOT** work: -->
+<p>Expressions tersebut akan dievaluasi di dalam data scope pada Vue instance. Namun perlu diingat, bahwa setiap binding hanya boleh terdapat <strong>satu expression tunggal</strong>, jadi contoh di bawah ini <strong>TIDAK</strong> dapat berjalan:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ini adalah sebuah statement, dan bukan sebuah expression: --&gt;</span></div><div class="line">&#123;&#123; var a = 1 &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- flow control juga tidak dapat bekerja, gunakan ternary expressions --&gt;</span></div><div class="line">&#123;&#123; if (ok) &#123; return message &#125; &#125;&#125;</div></pre></td></tr></table></figure>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><!-- Vue.js allows you to append optional "filters" to the end of an expression, denoted by the "pipe" symbol: -->
+<p>Vue.js mengizinkan Anda untuk menambahkan “filter” opsional untuk mengubah hasil akhir dari sebuah expression. Fitler dilambangkan dengan simbol “pipe” (pipa).</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div></pre></td></tr></table></figure>
+<!-- Here we are "piping" the value of the `message` expression through the built-in `capitalize` filter, which is in fact just a JavaScript function that returns the capitalized value. Vue.js provides a number of built-in filters, and we will talk about how to write your own filters later. -->
+<p>Di sini kita “mem-pipa” value dari expression <code>message</code> melalui filter bawaan yang bernama <code>capitalize</code>, dimana sebenarnya filter tersebut hanyalah sebuah function pada JavaScript yang me-return value dengan huruf kapital. Vue.js menyediakan beberapa filter bawaan, dan kita akan membicarakannya serta bagaimana cara membuat filter kita sendiri nanti.</p>
+<!-- Note that the pipe syntax is not part of JavaScript syntax, therefore you cannot mix filters inside expressions; you can only append them at the end of an expression. -->
+<p>Perlu dicatat bahwa simbol “pipa” bukanlah bagian dari sintaks JavaScript, karena itu anda tidak dapat mencampurkan filter di dalam sebuah expression; Anda hanya dapat menambahkannya di akhir sebuah expression.</p>
+<!-- Filters can be chained: -->
+<p>Filter juga dapat dirantai/disambungkan (chained):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
+<p>Filters can also take arguments:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA 'arg1' arg2 &#125;&#125;</div></pre></td></tr></table></figure>
+<!-- The filter function always receives the expression's value as the first argument. Quoted arguments are interpreted as plain string, while un-quoted ones will be evaluated as expressions. Here, the plain string `'arg1'` will be passed into the filter as the second argument, and the value of expression `arg2` will be evaluated and passed in as the third argument. -->
+<p>Function filter selalu menerima value expression sebagai argument pertama. Argument yang berada dalam tanda kutip dianggap sebagai string biasa, sementara itu argument tanpa tanda kutip dianggap sebagai expression. Di atas, terdapat string biasa <code>&#39;arg1&#39;</code> yang akan di-passing ke dalam filter sebagai argument ke-dua, dan value dari expression <code>arg2</code> akan di evaluasi dan di-pass ke dalam argument ke-tiga.</p>
+<h2 id="Directives"><a href="#Directives" class="headerlink" title="Directives"></a>Directives</h2><!-- Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be **binding expressions**, so the rules about JavaScript expressions and filters mentioned above apply here as well. A directive's job is to reactively apply special behavior to the DOM when the value of its expression changes. Let's review the example we saw in the introduction: -->
+<p>Directive adalah atribut khusus yang diawali dengan awalan <code>v-</code>. Value pada atribut directive diharapkan menjadi <strong>binding expressions</strong>, jadi aturan tentang expression JavaScript dan filter yang disebutkan di atas juga berlaku di sini. Tugas sebuah directive adalah untuk melakukan behavior (tingkah laku) spesial secara reaktif kepada DOM ketika sebuah value dari expression tersebut berubah. Mari kita lihat contoh yang sudah kita lihat pada halaman introduction.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"greeting"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- Here, the `v-if` directive would remove/insert the `<p>` element based on the truthiness of the value of the expression `greeting`. -->
+<p>Di sini, directive <code>v-if</code> akan me-remove/meng-insert elemen <code>&lt;p&gt;</code> berdasarkan value dari expression <code>greeting</code>.</p>
+<h3 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h3><!-- Some directives can take an "argument", denoted by a colon after the directive name. For example, the `v-bind` directive is used to reactively update an HTML attribute: -->
+<p>Beberapa directive dapat mengambil “argument”, yang ditandai dengan tanda titik dua (colon) setelah nama directive. Sebagai contoh, directive <code>v-bind</code> dapat digunakan untuk mengupdate sebuah atribut HTML secara reaktif.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- Here `href` is the argument, which tells the `v-bind` directive to bind the element's `href` attribute to the value of the expression `url`. You may have noticed this achieves the same result as an attribute interpolation using `href="{{url}}"<code>: that is correct, and in fact, attribute interpolations are translated into</code>v-bind` bindings internally. –&gt;
+<p>Di sini <code>href</code> adalah argument, dimana memberitahu kepada directive <code>v-bind</code> untuk mem-bind elemen atribut <code>href</code> kepada value yang dihasilkan dari expression <code>url</code>. Anda mungkin memperhatikan bahwa cara ini memiliki hasil yang sama dengan cara ketika kita menggunakan interpolasi atribut <code>href="{{url}}"</code>. Memang benar, karena pada kenyataanya secara internal interpolasi atribut diterjemahkan ke dalam binding <code>v-bind</code>.</p>
+<!-- Another example is the `v-on` directive, which listens to DOM events: -->
+<p>Contoh lainnya adalah directive <code>v-on</code>, dimana ia mendegarkan/memantau event (kejadian) yang terjadi pada DOM:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- Here the argument is the event name to listen to. We will talk about event handling in more detail too. -->
+<p>Di sini argumen tersebut adalah nama event yang ingin didengarkan (dipantau). Kita akan berbicara mengenai penanganan event (event handling) lebih rinci nanti.</p>
+<h3 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h3><!-- Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the `.literal` modifier tells the directive to interpret its attribute value as a literal string rather than an expression: -->
+<p>Modifiers adalah postfixes spesial yang ditandai dengan sebuah tanda titik, dimana hal tersebut mengindikasikan jika sebuah directive harusnya dilambungkan/diloncatkan (bound) secara khusus. Sebagai contoh, modifier <code>.literal</code> memberitahu kepada directive untuk meng-interpretasi value atributnya sebagai sebuah string biasa (literal string) dan bukan sebagai expression:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href.literal</span>=<span class="string">"/a/b/c"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- Of course, this seems pointless because we can just do `href="/a/b/c"` instead of using a directive. The example here is just for demonstrating the syntax. We will see more practical uses of modifiers later. -->
+<p>Tentu saja, ini nampaknya sangat tidak berarti karena kita dapat cukup mengetik <code>href=&quot;/a/b/c&quot;</code> daripada menggunakan sebuah directive. Contoh di sini hanyalah untuk mendemonstrasikan sintaks. Kita akan lihat pemanfaatan modifier nanti.</p>
+<h2 id="Shorthands"><a href="#Shorthands" class="headerlink" title="Shorthands"></a>Shorthands</h2><!-- The `v-` prefix serves as a visual cue for identifying Vue-specific attributes in your templates. This is useful when you are using Vue.js to apply dynamic behavior to some existing markup, but can feel verbose for some frequently used directives. At the same time, the need for the `v-` prefix becomes less important when you are building an [SPA](https://en.wikipedia.org/wiki/Single-page_application) where Vue.js manages every template. Therefore, Vue.js provides special shorthands for two of the most often used directives, `v-bind` and `v-on`: -->
+<p>Awalan <code>v-</code> menyediakan bantuan visual untuk mengidentifikasi atribut spesifik milik Vue.js pada template Anda. Ini sangat bermanfaat ketika Anda menggunakan Vue.js untuk memakai behavior (tingkah laku) dinamis kepada beberapa markup yang ada, akan tetapi terkadang terasa terlalu panjang terutama pada beberapa directive yang sering digunakan. Pada saat yang sama, kebutuhan akan awalan <code>v-</code> menjadi kurang begitu penting ketika Anda membangun sebuah <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">SPA</a> dimana Vue.js mengatur setiap template yang ada. Oleh karenanya, Vue.js menyediakan shorthands untuk dua directive yang paling sering dipakai, yakni <code>v-bind</code> dan <code>v-on</code>:</p>
+<h3 id="v-bind-Shorthand"><a href="#v-bind-Shorthand" class="headerlink" title="v-bind Shorthand"></a><code>v-bind</code> Shorthand</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- full syntax --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- shorthand --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line">or</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- full syntax --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">"someDynamicCondition"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- shorthand --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">:disabled</span>=<span class="string">"someDynamicCondition"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="v-on-Shorthand"><a href="#v-on-Shorthand" class="headerlink" title="v-on Shorthand"></a><code>v-on</code> Shorthand</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- full syntax --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- shorthand --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<!-- They may look a bit different from normal HTML, but all Vue.js supported browsers can parse it correctly, and they do not appear in the final rendered markup. The shorthand syntax is totally optional, but you will likely appreciate it when you learn more about its usage later. -->
+<p>Mungkin terlihat sedikit berbeda jika dibandingkan dengan halaman HTML biasa, namun semua browser yang mendukung Vue.js dapat mem-parse kode tersebut dengan sempurna, dan kode tersebut tidak tampil pada layar browser. Shorthand tersebut memang bersifat opsional, tapi Anda akan menyukainya ketika Anda mempelajari lebih lanjut mengenai penggunaannya nanti.</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/instance.html">The Vue Instance</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/computed.html">Computed Properties</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      <!-- Caught a mistake or want to contribute to the documentation? -->
+      Ada kesalahan pada dokumentasi ini, atau ingin turut berkontribusi?
+      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/guide/syntax.md" target="_blank">
+        Edit halaman ini di Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>
